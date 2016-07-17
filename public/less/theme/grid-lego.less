@@ -1,0 +1,92 @@
+/**
+ * GRID SYSTEM
+ *
+ * This grid enables fluid width tiles with fixed width gutters and margins. This behaviour was impossible using the
+ * previous semantic grid system (www.semantic.gs).
+ *
+ * The wrapper element for the area the grid applies to should have a class of 'grid'.
+ * Rather than using the columns mixin on the tiles as before, each tile should have a wrapper element which the mixin
+ * is applied to.
+ *
+ * For example:
+ *
+ * <!-- HTML -->
+ *
+ * <ul class="grid">
+ *   <li class="tile-wrapper">
+ *     <div class="tile">Tile</div>
+ *   </li>
+ *   <!-- ... -->
+ * </ul>
+ *
+ *
+ * // css
+ * .tile-wrapper {
+ *  .columns(6); // Each tile stretches across 4 columns (out of 24) so there are 4 tiles per row
+ *
+ *  .tile {
+ *    // Tile specific styles
+ *  }
+ * }
+ **/
+
+@import './responsive-lego.less';
+
+@gutter-width: 12;
+@columns: 24;
+@total-width: 100%;
+@grid-margin-small: 8px;
+@grid-vertical-margin-small: 12px;
+@grid-margin-medium: 18px;
+@grid-vertical-margin-medium: 24px;
+@grid-margin-large: 20px;
+@grid-vertical-margin-large: 24px;
+@grid-margin-extra-large: 36px;
+@grid-vertical-margin-extra-large: 24px;
+@half-gutter-width: @gutter-width * 0.5 * 1px;
+
+.ui-components-library {
+
+  .grid {
+    margin: -@half-gutter-width;
+    padding-left: @grid-margin-small;
+    padding-right: @grid-margin-small;
+    padding-top: @grid-vertical-margin-small;
+    padding-bottom: @grid-vertical-margin-small;
+
+    @media @medium {
+      padding-left: @grid-margin-medium;
+      padding-right: @grid-margin-medium;
+      padding-top: @grid-vertical-margin-medium;
+      padding-bottom: @grid-vertical-margin-medium;
+    }
+
+    @media @large {
+      padding-left: @grid-margin-large;
+      padding-right: @grid-margin-large;
+      padding-top: @grid-vertical-margin-large;
+      padding-bottom: @grid-vertical-margin-large;
+    }
+
+    @media @extra-large {
+      padding-left: @grid-margin-extra-large;
+      padding-right: @grid-margin-extra-large;
+      padding-top: @grid-vertical-margin-extra-large;
+      padding-bottom: @grid-vertical-margin-extra-large;
+    }
+
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+  }
+}
+
+.columns(@columns-to-span) {
+  display: block;
+  float: left;
+  width: @total-width * @columns-to-span / @columns;
+  padding: @half-gutter-width;
+}

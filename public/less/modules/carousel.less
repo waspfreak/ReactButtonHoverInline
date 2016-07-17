@@ -1,0 +1,226 @@
+.carousel-main{
+  max-width: 1079px;
+    margin: auto;
+    width: 100%;
+}
+
+.row.carousel-row{
+    margin-left: -8px;
+    margin-right: -8px;
+    max-width: 1078px;
+    @media @tablet{
+      margin-left: -8px;
+      margin-right: -8px;
+    }
+}
+
+/*Carousel*/
+@media @large-only{
+    .carousel-slide{
+      min-height: 351px;
+    }
+}
+
+
+@media @medium-small-only{
+  .carousel-slide{
+    .carousel-stamp{
+      background-size: cover;
+      background-position: center;
+      height: 250px;
+    }
+    .carousel-wrapp{
+      min-height: 250px;
+      padding-top: 3%;
+    }
+  }
+}
+
+
+.carousel-slide{
+  border-left: 1px solid @line-dark;
+  border-right: 1px solid @line-dark;
+  border-top: 1px solid @line-dark;
+  position: relative;
+  overflow: hidden;
+  min-height: 500px;
+  @media @small {
+    min-height: 525px;
+  }
+  .carousel-stamp{
+    @media @small {
+      background-size: cover;
+      background-position-y: center;
+      background-position-x: center;
+      height: 200px;
+    }
+  }
+
+  .carousel-wrapp{
+    min-height: 351px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    @media @desktop-xl{
+      min-height: 351px;
+      display: flex;
+      align-items: center;
+    }
+    @media @large{
+      display: flex;
+      align-items: center;
+      min-height: 351px;
+    }
+    @media @small {
+      display: flex;
+      align-items: center
+      bottom: 0;
+      min-height: 325px;
+      /*padding-top:5.2% !important;*/
+      position: absolute;
+      width:100%;
+      z-index: 5;
+    }
+  }
+
+  .carousel-content{
+    overflow: hidden;
+    .hh-xl{
+      letter-spacing: -1.5px;
+      margin: 0;
+      margin-bottom: 2%;
+    }
+    .hh-s{
+      margin: 0;
+    }
+    .tt-m{
+      position: absolute;
+      bottom: 0;
+    }
+  }
+}
+
+
+/*Carousel control*/
+
+.carousel-control{
+  background: @bg-grey-light;
+  border-top: 0;
+  border: 1px solid @line-dark;
+  color: @tesco-blue;
+  overflow: hidden;
+  padding: 10px 5px;
+  .carousel-prev,
+  .carousel-next,
+  .carousel-pause{
+    /* line-height: 1em; */
+    border-radius: 54%;
+    border: 2px solid;
+    display: inline-block;
+    height: 27px;
+    line-height: 24px;
+    padding: 0;
+    text-align: center;
+    width: 27px;
+  }
+  .carousel-pause{
+    margin-left: 10px;
+  }
+  .carousel-dots{
+    font-size: 26px;
+    margin-left:10px;
+    margin-right:10px;
+  }
+  a{
+    display: inline-block;
+    float: left;
+  }
+}
+
+.carousel-control .carousel-container{
+  float:  right;
+}
+
+@media @medium{
+  .carousel-slide{
+    background-position: right;
+    background-size: 50%;
+    min-height: 219px;
+    .hh-xl{
+      font-size: 24px;
+    }
+
+    .carousel-stamp {
+    position: absolute;
+    right: 0;
+    height: 219px;
+    width: 50%;
+    background-size: cover;
+    }
+    .carousel-wrapp{
+      display: flex;
+      align-items: center;
+      min-height:219px;
+      padding: 0 16px;
+      width: 50%;
+    }
+    .ping-container{
+      max-width:100px;
+      max-height:100px;
+    }
+  }
+
+}
+
+
+
+/*BACKGROUND TEST*/
+
+.carousel-slide{
+  &.slide-1{
+    background-image: url(../img/left/50_50_Easter_lamb.jpg);
+  }
+  &.slide-2{
+    background-image: url(../img/left/50_50Christmas.jpg);
+  }
+  &.slide-3{
+    background-image: url(../img/left/50_50Christmas1.jpg);
+  }
+  &.slide-4{
+    background-image: url(../img/left/50_50Easter_lamb_1.jpg);
+  }
+  &.slide-5{
+    background-image: url(../img/left/50_50Easter.jpg);
+  }
+  &.slide-6{
+    background-image: url(../img/left/50_50Easter1.jpg);
+  }
+  &.slide-7{
+    background-image: url(../img/left/50_50Fathersday.jpg);
+  }
+  &.slide-8{
+    background-image: url(../img/left/50_50Halloween.jpg);
+  }
+  &.slide-9{
+    background-image: url(../img/center/Christmas-example-v1.1.jpg);
+  }
+  &.slide-10{
+    background-image: url(../img/center/Christmas-example-v1.2.jpg);
+  }
+  &.slide-11{
+    background-image: url(../img/center/Christmas-example-v1.3.jpg);
+  }
+  &.slide-12{
+    background-image: url(../img/center/Easter-example-v2.1.jpg);
+  }
+  &.slide-13{
+    background-image: url(../img/center/FathersDay-example-v4.1.jpg);
+  }
+  &.slide-14{
+    background-image: url(../img/center/FathersDay-example-v4.2.jpg);
+  }
+  &.slide-15{
+    background-image: url(../img/center/Halloween-example-v3.1.jpg);
+  }
+
+}

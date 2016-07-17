@@ -1,0 +1,43 @@
+// Viewport sizes
+@small-max: 599px;
+@medium-small-min: 600px;
+@medium-small-max: 767px;
+@medium-min: 768px;
+@medium-mid: 769px;
+@medium-max: 991px;
+@large-min: 992px;
+@large-max: 1200px; // point where page becomes fixed width with flexible margins
+
+//new ddl break points
+@ddl-small-min: 320px;
+@ddl-small-max: 503px;
+@ddl-medium-small-min: 504px;
+@ddl-medium-small-max: 755px;
+@ddl-medium-min: 756px;
+@ddl-medium-max: 1007px;
+@ddl-large-small-min: 1008px;
+@ddl-large-small-max: 1259px;
+@ddl-large-min: 1260px;
+@ddl-large-max: 1511px;
+@ddl-extra-large-min: 1512px;
+
+
+@small: ~"(max-width: @{small-max})";
+@small-medium: ~"(max-width: @{medium-small-max})";
+@small-large: ~"(max-width: @{medium-min})";
+@medium: ~"(min-width: @{medium-min})";
+@medium-large: ~"(min-width: @{medium-mid})";
+@medium-small: ~"(min-width: @{medium-small-min})";
+@medium-small-only: ~"(min-width: @{medium-small-min}) and (max-width: @{medium-small-max})"; // for styles that should not be shared with large
+@medium-only: ~"(min-width: @{medium-min}) and (max-width: @{medium-max})"; // for styles that should not be shared with large
+@large-only: ~"(min-width: @{large-min} and (max-width: @{large-max}))";
+@large: ~"(min-width: @{large-min})";
+@extra-large: ~"(min-width: @{large-max})";
+
+//ddl grid system
+@ddl-small: ~"(max-width: @{ddl-small-max})";
+@ddl-medium-small: ~"(min-width: @{ddl-medium-small-min})";
+@ddl-medium: ~"(min-width: @{ddl-medium-min})";
+@ddl-large-small: ~"(min-width: @{ddl-large-small-min})";
+@ddl-large: ~"(min-width: @{ddl-large-min})";
+@ddl-extra-large: ~"(min-width: @{ddl-extra-large-min})";

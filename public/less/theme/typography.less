@@ -1,0 +1,128 @@
+
+
+/*FONT*/
+@font-face {
+    font-family: 'tesco';
+    src: url('../font/Tesco_W_Rg.ttf') format('ttf');
+         //url('../font/tescodisplay_w_rg-webfont.woff') format('woff');
+/*    font-weight: normal;
+    font-style: normal;*/
+}
+
+@font-face {
+    font-family: 'tescoMedium';
+    src: url('../font/Tesco_W_Md.ttf') format('ttf');
+         //url('../font/tescodisplay_w_rg-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'tescoregular';
+    src: url('../fonts/tesco/tesco-regular.eot');
+    src: url('../fonts/tesco/tesco-regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/tesco/tesco-regular.woff2') format('woff2'),
+         url('../fonts/tesco/tesco-regular.woff') format('woff'),
+         url('../fonts/tesco/tesco-regular.ttf') format('truetype'),
+         url('../fonts/tesco/tesco-regular.svg#tescoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'tesco-bold';
+    src: url('../../fonts/tesco/tesco-bold.eot');
+    src: url('../../fonts/tesco/tesco-bold.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/tesco/tesco-bold.woff2') format('woff2'),
+         url('../../fonts/tesco/tesco-bold.woff') format('woff'),
+         url('../../fonts/tesco/tesco-bold.ttf') format('truetype'),
+         url('../../fonts/tesco/tesco-bold.svg#tescobold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+@tesco: tescoregular, sans-serif;
+@tescoMedium: tescoMedium, sans-serif;
+@tescoOld: tescoOld, sans-serif;
+
+
+.fonttype{
+  font-family: @tesco;
+  font-weight:normal;
+}
+
+body{
+  .fonttype;
+}
+
+/* HEADERS */
+
+.hh-xl {
+  .fonttype;
+  font-size: 32px;
+  @media @medium{
+      font-size: 28px;
+  }
+}
+
+.hh-l {
+    font-size: 30px;
+}
+
+.hh-m {
+    .fonttype;
+    font-size: 28px;
+}
+
+.hh-s {
+    .fonttype;
+    font-size: 24px;
+}
+
+.hh-xs {
+    .fonttype;
+    font-size: 22px;
+}
+
+.hh-xxs {
+    .fonttype;
+    font-size: 20px;
+}
+
+
+
+/*TEXT*/
+
+
+.tt-xxl {
+    font-size: 20px;
+}
+
+.tt-xl {
+    font-size: 18px;
+}
+
+.tt-l {
+    font-size: 16px;
+}
+
+.tt-l-m {
+    font-size: 17px;
+}
+
+.tt-m {
+    font-size: 14px;
+}
+
+.tt-s {
+    font-size: 12px;
+}
+
+.tt-xs {
+    font-size: 10px;
+}

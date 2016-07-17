@@ -1,0 +1,79 @@
+
+/*Background Events color*/
+
+/*.bg-default{
+  background: @bg-grey-light;
+  .event-title,
+  .event-description,
+  .event-terms{
+    color: @grey-dark;
+  }
+  .event-button{
+    background: @tesco-blue;
+  }
+}*/
+
+.bg-mothersday{
+  background: #ffecee;
+  .event-title,
+  .event-description,
+  .event-terms{
+    color: #cd3949;
+  }
+  .event-button{
+    background: #cd3949;
+  }
+}
+
+.bg-easter{
+  background: #cdeded;
+  .event-title,
+  .event-description,
+  .event-terms{
+    color: #2b807e;
+  }
+  .event-description{
+    font-weight:300px;
+  }
+  .event-button{
+    background: #2b807e;
+  }
+}
+
+.bg-winners{
+  background: #009046;
+  .event-title,
+  .event-description,
+  .event-terms{
+    color: #fff;
+  }
+  .event-button{
+    background: #054725;
+  }
+}
+
+
+/*BTN EXAMPLE*/
+.button-primary{
+  color: #fff;
+  background-color: #00539f;
+  border-color: #00539f;
+  font-style: normal;
+  border-radius: 100px;
+  display: block;
+  max-width: 135px;
+  padding: 7px 0px;
+  margin-top: 3%;
+  text-decoration: none;
+  text-align: center;
+  &:hover{
+    text-decoration: underline;
+  }
+  @media @medium{
+    margin-top: 1%;
+  }
+}
+.button-primary::after{
+    font-family: "fontello";
+    content: '\e842';
+}

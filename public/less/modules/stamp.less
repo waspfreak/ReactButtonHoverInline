@@ -1,0 +1,68 @@
+/*MIXINS*/
+@import "theme/mediaquery.less";
+
+/* Stamp */
+.stamp-widget {
+
+  font: @tesco;
+  position:relative;
+  width:100%;
+  padding:12px 0;
+
+  @media @tablet {
+    float:left;
+    padding:12px;
+  }
+
+  @media @desktop, @desktop-xl {
+    float:left;
+    padding:12px;
+  }
+
+  &__half{
+    
+    @media @tablet, @desktop, @desktop-xl {
+      width:50%;
+    }
+
+  }
+
+  a, span {
+    display:block;
+    text-decoration:none;
+    color:#222;
+  }
+  
+  a:hover, a:focus {
+    text-decoration:underline;
+  }
+
+}
+
+.stamp--img-container {
+  overflow:hidden;
+
+  img {
+    display:block;
+    width:100%;
+  }
+
+}
+
+.stamp--caption-wrapper {
+  padding:12px;
+  border:1px solid #ccc;
+  background:#f6f6f6;
+  font-size:20px;
+  position:relative;
+
+  p {
+    margin-top:0;
+  }
+
+  .cta {
+    position:absolute;
+    right:0; top:0
+  }
+
+}
